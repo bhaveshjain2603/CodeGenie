@@ -171,8 +171,8 @@ function App() {
           © 2025 CodeGenie. All rights reserved.
           <p>Made with ❤️ by Bhavesh</p>
           <p>Powered by AI</p>
-          <a href="https://lucide.dev/">GitHub</a> <br />
-          <a href="https://lucide.dev/">Portfolio</a>
+          <a href="https://github.com/bhaveshjain2603" target="_blank">GitHub</a> <br />
+          <a href="https://sbk-portfolio.vercel.app" target="_blank">Portfolio</a>
         </footer>
       </main>
     </>
