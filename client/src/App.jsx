@@ -109,62 +109,71 @@ function App() {
   return (
     <>
       <main>
-        <div className="left">
-          <div className="header">
-            <h4>Code Review and Execution</h4>
-            <p>Write your code, get a review, and execute it!</p>
-          </div>
-          <div className="code">
-            <Editor
-              value={code}
-              onValueChange={setCode}
-              highlight={(code) => prism.highlight(code, prism.languages.javascript, 'javascript')}
-              padding={10}
-              style={{
-                fontFamily: '"Fira code", "Fira Mono", monospace',
-                fontSize: 16,
-                border: "1px solid #ddd",
-                borderRadius: "5px",
-                height: "100%",
-                width: "100%"
-              }}
-            />
-          </div>
-          <div className="button-container">
-            <div onClick={runCode} className="run">Run</div>
-            <div onClick={reviewCode} className="review">Review</div>
-          </div>
-        </div>
-
-        <div className="right">
-          {showConsole && (
-            <div className="console-area">
-              <h3>Console:</h3>
-              <div className="console-output">
-                {consoleOutput.map((log, index) => (
-                  <div key={index}>{log}</div>
-                ))}
-              </div>
-            </div>
-          )}
-          {executionResult && (
-            <div className="execution-result">
-              <pre>{executionResult}</pre>
-            </div>
-          )}
-          {!showConsole && (
-            <div className="review-area">
-              <ReactMarkdown
-                components={{
-                  code: CodeBlock
+        <header>
+          <h2>CodeGenie - AI Powered Code Review and Execution</h2>
+          <h4>Write your code, get a review, and execute it!</h4>
+        </header>
+        <div className="code-area">
+          <div className="left">
+            <div className="code">
+              <Editor
+                value={code}
+                onValueChange={setCode}
+                highlight={(code) => prism.highlight(code, prism.languages.javascript, 'javascript')}
+                padding={10}
+                style={{
+                  fontFamily: '"Fira code", "Fira Mono", monospace',
+                  fontSize: 16,
+                  border: "1px solid #ddd",
+                  borderRadius: "5px",
+                  height: "100%",
+                  width: "100%"
                 }}
-              >
-                {review}
-              </ReactMarkdown>
+              />
             </div>
-          )}
-          <Toaster />
+            <div className="button-container">
+              <div onClick={runCode} className="run">Run</div>
+              <div onClick={reviewCode} className="review">Review</div>
+            </div>
+          </div>
+
+          <div className="right">
+            {showConsole && (
+              <div className="console-area">
+                <h3>Console:</h3>
+                <div className="console-output">
+                  {consoleOutput.map((log, index) => (
+                    <div key={index}>{log}</div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {executionResult && (
+              <div className="execution-result">
+                <pre>{executionResult}</pre>
+              </div>
+            )}
+            {!showConsole && (
+              <div className="review-area">
+                <ReactMarkdown
+                  components={{
+                    code: CodeBlock
+                  }}
+                >
+                  {review}
+                </ReactMarkdown>
+              </div>
+            )}
+            <Toaster />
+          </div>
         </div>
+        <footer>
+          © 2025 CodeGenie. All rights reserved.
+          <p>Made with ❤️ by Bhavesh</p>
+          <p>Powered by AI</p>
+          <a href="https://lucide.dev/">GitHub</a> <br />
+          <a href="https://lucide.dev/">Portfolio</a>
+        </footer>
       </main>
     </>
   );
