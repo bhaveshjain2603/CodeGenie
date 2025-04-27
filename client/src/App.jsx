@@ -29,6 +29,7 @@ function App() {
       setShowConsole(false);
       const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/ai/get-review`, { code });
       setReview(response.data);
+      toast.success('Review received!');
     } catch (error) {
       console.error('Review error:', error);
     }
