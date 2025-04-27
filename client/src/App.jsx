@@ -110,8 +110,9 @@ function App() {
     <>
       <main>
         <header>
-          <h2>CodeGenie - AI Powered Code Review and Execution</h2>
+          <h2>CodeGenie - AI Powered Code Review and Execution System</h2>
           <h4>Write your code, get a review, and execute it!</h4>
+          <p>Note: This is a demo version and currently supports only JavaScript. The AI model is not perfect and may not always provide accurate reviews.</p>
         </header>
         <div className="code-area">
           <div className="left">
