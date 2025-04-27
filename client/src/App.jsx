@@ -53,6 +53,7 @@ function App() {
       sandbox();
 
       console.log = originalConsoleLog;
+      toast.success('Code executed!');
       setConsoleOutput(logs);
       setExecutionResult('');
     } catch (error) {
