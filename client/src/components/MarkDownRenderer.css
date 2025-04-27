@@ -1,0 +1,30 @@
+.code-block-wrapper {
+  position: relative;
+}
+
+.code-block-wrapper pre {
+  position: relative;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.copy-button:hover {
+  opacity: 1;
+}

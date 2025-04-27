@@ -1,0 +1,217 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+main .left .run {
+  position: absolute;
+  bottom: 1rem;
+  right: 9rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+main .right {
+  display: flex;
+  flex-direction: column;
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  overflow: auto;
+  gap: 1rem;
+  line-height: 2;
+}
+
+main .right .console-area {
+  background-color: #1e1e1e;
+  color: #00ff00;
+  padding: 10px;
+  margin-top: 10px;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.console-output div {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  main .left,
+  main .right {
+    flex-basis: 100%;
+  }
+  main .left {
+    height: 50%;
+  }
+  main .right {
+    height: 50%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  main .right .review {
+    position: static;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+  }
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.run {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.run:hover {
+  background-color: #45a049;
+}
+
+.execution-result {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Fira Code', monospace;
+}
+
+.execution-result pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.console-output {
+  margin-bottom: 10px;
+}
+
+.console-output pre {
+  margin: 5px 0;
+  padding: 2px 0;
+}
+
+.code-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.console-header h3 {
+  margin: 0;
+}
+
+.markdown-content {
+  padding: 1rem;
+  overflow-wrap: break-word;
+}
+
+.code-block-container {
+  position: relative;
+  background: #1e1e1e;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.code-block-container code {
+  display: block;
+  padding: 1rem;
+  overflow-x: auto;
+}
