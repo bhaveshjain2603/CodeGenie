@@ -31,6 +31,7 @@ function App() {
       setReview(response.data);
       toast.success('Review received!');
     } catch (error) {
+      toast.error('Error: Unable to get review. Please try again.');
       console.error('Review error:', error);
     }
   }
